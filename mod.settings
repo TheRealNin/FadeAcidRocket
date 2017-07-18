@@ -1,0 +1,9 @@
+name        = "Fade Acid Rocket"
+source_dir  = "source"
+output_dir  = "output"
+description = [=[ModID: 40540293
+Replaces the fade's stab with a heavy-hitting acid rocket!]=]
+image       = "preview.jpg"
+tag_modtype = "Gameplay Tweak"
+tag_support = "Must be run on Server"
+publish_id = "40540293"
