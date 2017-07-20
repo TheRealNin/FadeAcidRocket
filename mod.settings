@@ -1,7 +1,7 @@
 name        = "Fade Acid Rocket"
 source_dir  = "source"
 output_dir  = "output"
-description = [=[ModID: 40540293
+description = [=[ModID: 40540293
 Replaces the fade's stab with a heavy-hitting acid rocket!]=]
 image       = "preview.jpg"
 tag_modtype = "Gameplay Tweak"

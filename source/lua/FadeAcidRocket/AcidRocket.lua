@@ -9,7 +9,8 @@ class 'AcidRocket' (PredictedProjectile)
 AcidRocket.kMapName            = "acidrocket"
 AcidRocket.kProjectileCinematic = PrecacheAsset("cinematics/acidrocket_projectile.cinematic")
 
-AcidRocket.kRadius             = 0.5
+AcidRocket.kRadius             = 0.05
+AcidRocket.kDetonateRadius     = 0.65
 AcidRocket.kClearOnImpact      = true
 AcidRocket.kClearOnEnemyImpact = true
 
@@ -37,6 +38,15 @@ function AcidRocket:GetDamageType()
 end
 function AcidRocket:GetDeathIconIndex()
     return kDeathMessageIcon.BileBomb
+end
+
+function AcidRocket:ProcessNearMiss( targetHit, endPoint )
+    if targetHit and GetAreEnemies(self, targetHit) then
+        if Server then
+            self:ProcessHit( targetHit )
+        end
+        return true
+    end
 end
 
 if Server then
